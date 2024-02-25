@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>About Us</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <div class="imgBx active" style="--i:2.6;" data-id="content1">
+                <img src="Devanshi.jpg" alt="">
+            </div>
+            <div class="imgBx" style="--i:5.26;" data-id="content2">
+                <img src="Aryan.jpg" alt="">
+            </div>
+            <div class="imgBx" style="--i:7.85;" data-id="content3">
+                <img src="Aart.jpg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <div class="contentBx active" id="content1">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="Devanshi.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Devanshi Dave<br><span>thunder Coding</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://instagram.com/devanshiiii_5672?igshid=NzZlODBkYWE4Ng=="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/devanshi-dave-41b52325a"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content2">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="Aryan.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Aaryan Chhatrola<br><span>Gamer</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://instagram.com/aaryan_patel_4256?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#www.linkedin.com/in/aryan-patel-b5886528b"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBx" id="content3">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="Aart.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Aart Desai<br><span>Devloper</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://instagram.com/aart.desai?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#https://www.linkedin.com/in/eldragos-aart-39045527b"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+    <script>
+        let imgBx = document.querySelectorAll('.imgBx')
+        let contentBx = document.querySelectorAll('.contentBx')
+
+        for(let i=0; i < imgBx.length; i++){
+            imgBx[i].addEventListener('mouseover', function(){
+                for(let i=0; i<contentBx.length; i++){
+                    contentBx[i].className = 'contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+
+
+                for(let i=0; i<imgBx.length; i++){
+                    imgBx[i].className = 'imgBx';
+                }
+                this.className = 'imgBx active';
+            })
+        }
+    </script>
+</body>
+</html>
